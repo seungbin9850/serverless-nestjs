@@ -1,5 +1,6 @@
 import config from './src/config';
 import { ConnectionOptions } from 'typeorm';
+import { User } from './src/entities/user.entity';
 
 const connectionOptions: ConnectionOptions = {
   type: 'mysql',
@@ -11,7 +12,7 @@ const connectionOptions: ConnectionOptions = {
   synchronize: true,
   logging: true,
   timezone: '+09:00',
-  entities: [],
+  entities: [User],
 };
 
 export default connectionOptions;
