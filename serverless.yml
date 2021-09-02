@@ -20,3 +20,10 @@ functions:
           method: any
           path: /{proxy+}
           cors: true
+  user:
+    handler: src/lambda.handler
+    events:
+      - http:
+          method: any
+          path: /user/{proxy+}
+          cors: true
