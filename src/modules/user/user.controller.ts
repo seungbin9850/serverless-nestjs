@@ -9,5 +9,6 @@ export class UserController {
   @Post('/')
   async createUser(@Body() req: CreateUserDTO) {
     await this.userService.createUser(req);
+    return { status: 201, message: 'success' };
   }
 }
